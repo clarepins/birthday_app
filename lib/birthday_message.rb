@@ -1,11 +1,19 @@
+require 'date'
+
 class BirthdayMessage
-  def initialize(bday, date_today = Time.now.strftime('%d/%m'))
-    @bday = bday
-    @date_today = date_today
+  def initialize(day, month, date_today = Time.now.strftime('%d/%m/%Y'))
+    @day = day
+    @month = month
+    @date_today
   end
 
   def days_till_bday
-  end 
+    @bday - @date_today
+  end
+
+  def bday_format
+    @bday = Date.new(2019, @month.to_i, @day.to_i)
+  end
 
   def create_msg
     if @bday == @date_today
