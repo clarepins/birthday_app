@@ -7,10 +7,27 @@
   </div>
   <div>
     <h2>When is your birthday?</h2>
-    <label for='day'>day:</label>
+    <label for='day'>Day:</label>
     <input type='text' name='day'></input>
-    <label for='month'>month [change to drop down]:</label>
-    <input type='text' name='month'></input>
+  </div>
+  <div>
+    <label for='month'>Month:</label>
+    <input list='months' name='month'>
+      <datalist id='month'>
+        <option value='January'>
+        <option value='February'>
+        <option value='March'>
+        <option value='April'>
+        <option value='May'>
+        <option value='June'>
+        <option value='July'>
+        <option value='August'>
+        <option value='September'>
+        <option value='October'>
+        <option value='November'>
+        <option value='December'>
+      </datalist>
+    <input type='submit'>
   </div>
   <div class='button'>
     <button type='submit'>Go!</button>
